@@ -1,0 +1,31 @@
+{
+    "name": "Victoria Khanieva",
+    "title": "Java Developer",
+    "skills": {
+        "title": "Skills",
+        "content": "Java, Spring Boot, PostgreSQL, Hibernate, MyBatis, Liquibase, Kafka, K8s, OpenShift, Docker, Gradle, Maven | English C1"
+    },
+    "about": {
+        "title": "About Me",
+        "content": "Approximately 2 years engaged in the development of banking software as a Java developer..."
+    },
+    "experience": {
+        "title": "Experience",
+        "items": [
+            {
+                "role": "Java Developer",
+                "company": "Senla",
+                "dates": "March 2023 – Present",
+                "description": "Project - microservices for aggregating pre-approval proposals for legal entities..."
+            }
+        ]
+    },
+    "education": {
+        "title": "Education",
+        "content": "Tula State University, Bachelor of Applied Mathematics and Informatics • 2016 – 2019"
+    },
+    "contacts": {
+        "title": "Contacts",
+        "content": "Phone: +7 (902) 844-85-01\nEmail: vkhanieva@gmail.com\nLinkedIn: linkedin.com/in/vkhanieva\nGitHub: github.com/vkhiani\nHabr: habr.com/ru/users/vkhanieva/posts/"
+    }
+}

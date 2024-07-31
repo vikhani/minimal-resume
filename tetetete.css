@@ -1,0 +1,283 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.profile-pic {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-pic {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative; /* Needed for positioning the copy-message */
+}
+
+.contact-info i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.contact-info button {
+    margin-left: 10px; /* Space between buttons */
+}
+
+.contact-button, .copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12); /* Gradient from blue to purple to orange */
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-right: 5px; /* Add margin to space the buttons */
+    position: relative; /* For inner highlight effect */
+}
+
+.contact-button {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Edge highlight effect */
+.contact-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light highlight on the edge */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+    z-index: 1; /* Place highlight above the button but below the icon */
+}
+
+.contact-button:hover {
+    background-color: #868686;
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #2980b9, #8e44ad, #e67e22); /* Slightly darker gradient */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.contact-button i {
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+/* 
+.light-theme .contact-button {
+    background-color: var(--button-background-light);
+    color: var(--button-text-light);
+}
+
+.dark-theme .contact-button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-dark);
+} */
+
+/* .contact-button:hover {
+    background-color: #868686;
+} */
+
+.copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.copy-message {
+    display: inline-block;
+    font-size: 14px;
+    color: transparent; /* Hide the default text color */
+    background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12); /* Gradient from blue to purple to orange */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For WebKit browsers */
+  /*  text-fill-color: transparent;  For WebKit browsers */
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+.control-panel {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add space between items */
+}
+
+.switch-container {
+    margin-right: 20px; /* Add space between toggles */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Adjust width based on the total width needed */
+    height: 31px; /* Height of the toggle switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Adjust padding to fit icons within the slider */
+    height: 100%;
+    width: 100%;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 3px; /* Adjust the left position to fit the starting point */
+    bottom: 3px;
+    background-color: white;
+    transition: transform 0.4s;
+    border-radius: 50%;
+}
+
+.slider i {
+    color: #fff;
+    font-size: 15px;
+    z-index: 1;
+}
+
+.slider .fa-sun {
+    position: absolute;
+    left: 8px; /* Adjust left position to align with slider */
+}
+
+.slider .fa-moon {
+    position: absolute;
+    right: 8px; /* Adjust right position to align with slider */
+}
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px); /* Adjust translateX to fit within the slider */
+}
+
+input:not(:checked) + .slider .fa-sun {
+    color: #000; /* Adjust color for day mode */
+}
+
+input:checked + .slider .fa-moon {
+    color: #000; /* Adjust color for night mode */
+}
+
+.slider .label-en,
+.slider .label-ru {
+    font-size: 16px;
+    color: #fff;
+    z-index: 1;
+}
+
+.slider .label-en {
+    position: absolute;
+    right: 8px; /* Adjust left position to align with slider */
+}
+
+.slider .label-ru {
+    position: absolute;
+    left: 8px; /* Adjust right position to align with slider */
+}
+
+input:not(:checked) + .slider .label-en {
+    color: #787878; /* Adjust color for English mode */
+}
+
+input:checked + .slider .label-ru {
+    color: #fff; /* Adjust color for Russian mode */
+}
+
+:root {
+    --button-background-light: #ccc;
+    --button-background-dark: #000;
+    --button-text-light: #000;
+    --button-text-dark: #fff;
+}
+
+/* Theme styles */
+.light-theme {
+    background-color: #ebebeb;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #ebebeb;
+}
+
+.light-theme .copy-button {
+    color: var(--button-text-light);
+}
+
+.dark-theme .copy-button {
+    color: var(--button-text-dark);
+}
