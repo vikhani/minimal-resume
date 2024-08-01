@@ -53,6 +53,13 @@ header {
     margin-left: 10px; /* Space between buttons */
 }
 
+/* Contact buttons styles */
+.contact-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Margin above the contact buttons */
+}
+
 .contact-button, .copy-button {
     background-color: transparent;
     border: none;
@@ -73,7 +80,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -264,7 +271,7 @@ input:checked + .slider .label-ru {
 }
 
 /* Theme styles */
-.light-theme {
+/* .light-theme {
     background-color: #ebebeb;
     color: #000;
 }
@@ -272,15 +279,58 @@ input:checked + .slider .label-ru {
 .dark-theme {
     background-color: #333;
     color: #ebebeb;
+} */
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-.light-theme .copy-button {
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.light-theme .section-title,
+.light-theme .experience-title {
+    color: #333;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.dark-theme .section-title,
+.dark-theme .experience-title {
+    color: #f5f5f5;
+}
+
+.light-theme .fas.fa-copy {
+    color: #333;
+}
+
+.dark-theme .fas.fa-copy {
+    color: #f5f5f5;
+}
+
+
+.light-theme .author-name {
+    color: #333;
+}
+
+.dark-theme .author-name {
+    color: #f5f5f5;
+}
+
+/* .light-theme .copy-button {
     color: var(--button-text-light);
 }
 
 .dark-theme .copy-button {
     color: var(--button-text-dark);
-}
+} */
 
 .author-name {
     font-family: 'Roboto', sans-serif;
@@ -294,4 +344,114 @@ input:checked + .slider .label-ru {
 
 .name-position {
     border-bottom: 2px solid #ccc; /* Optional: Add a border below for emphasis */
+}
+
+.experience-item {
+    margin-bottom: 20px; /* Space between experience items */
+}
+
+.experience-title {
+    font-weight: bold; /* Make the title bold */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 5px; /* Space between title and description */
+    color: #333; /* Darker color for contrast */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #a4a4a4;
+    padding-bottom: 5px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.contacts-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-item {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.contacts-content.multi-column .contact-item {
+    flex: 1 1 calc(45% - 10px);
+}
+
+@media (max-width: 600px) {
+    .contact-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* To-Top Button Styles */
+.to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Position it to the right side of the screen */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    color: rgba(0, 0, 0, 0.7); /* Dark text color for contrast */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s, background 0.3s, box-shadow 0.3s, border 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Ensure it is not clickable */
+}
+
+.to-top-button.show {
+    opacity: 1; /* Show when scrolled down */
+    visibility: visible; /* Make it clickable */
+}
+
+.to-top-button:hover {
+    background: linear-gradient(135deg, #3395d6, #b05bd5, #f88b2b); /* Slightly darker gradient */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Lighter edge on hover */
+}
+
+.to-top-button i {
+    font-size: 20px;
 }

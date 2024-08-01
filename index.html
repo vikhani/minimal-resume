@@ -37,7 +37,7 @@
                         </button>
                         <span class="copy-message">Copied!</span>
                     </p>
-                    <div>
+                    <div class="contact-buttons">
                     <button id="pdfDownload" class="contact-button">
                         <i class="fas fa-download"></i>
                     </button>
@@ -80,28 +80,32 @@
             <h1 class="author-name" data-key="name"></h1>
             <h2 data-key="title"></h2>
             </div>
-            <section>
-                <h3 data-key="skills.title"></h3>
-                <p data-key="skills.content"></p>
+            <section class="skills-section">
+                <h3 data-key="skills.title" class="section-title">Skills</h3>
+                    <div class="skills-content" data-key="skills.content">
+                </div>
             </section>
             <section>
-                <h3 data-key="about.title"></h3>
+                <h3 data-key="about.title" class="section-title"></h3>
                 <p data-key="about.content"></p>
             </section>
             <section>
-                <h3 data-key="experience.title"></h3>
+                <h3 data-key="experience.title" class="section-title"></h3>
                 <div data-key="experience.items"></div>
             </section>
             <section>
-                <h3 data-key="education.title"></h3>
+                <h3 data-key="education.title" class="section-title"></h3>
                 <p data-key="education.content"></p>
             </section>
             <section>
-                <h3 data-key="contacts.title"></h3>
-                <p data-key="contacts.content"></p>
+                <h3 data-key="contacts.title" class="section-title"></h3>
+                <div data-key="contacts.content" class="contacts-content"></div>
             </section>
-        </main>
+                </main>
     </div>
-    <script src="scripts.js"></script>
+    <button class="to-top-button" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+        <script src="scripts.js"></script>
 </body>
 </html>

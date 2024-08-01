@@ -4,16 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const pdfDownload = document.getElementById('pdfDownload');
     const elements = document.querySelectorAll('[data-key]');
     const copyButtons = document.querySelectorAll('.copy-button');
+    const toTopButton = document.querySelector('.to-top-button');
 
     // Initialize with default theme
     document.body.classList.add('light-theme');
 
+ // Function to detect the user's system theme preference and set the initial theme
+ function detectSystemTheme() {
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    if (darkModeMediaQuery.matches) {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        themeToggle.checked = true;
+    } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        themeToggle.checked = false;
+    }
+}
+
+
     // Theme toggle
     themeToggle.addEventListener('change', () => {
         if (themeToggle.checked) {
-            document.body.classList.replace('light-theme', 'dark-theme');
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
         } else {
-            document.body.classList.replace('dark-theme', 'light-theme');
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
         }
     });
 
@@ -46,15 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const value = getValueFromJSON(key, data);
                     if (key === "experience.items") {
                         el.innerHTML = value.map(item => `
-                            <div>
-                                <h4>${item.role} • ${item.company} • ${item.dates}</h4>
+                            <div class="experience-item">
+                                <h4 class="experience-title">${item.role} • ${item.company} • ${item.dates}</h4>
                                 <p>${item.description}</p>
                             </div>
                         `).join('');
+                    } else if (key === "contacts.content") {
+                        el.innerHTML = value.map(contact => {
+                            const [type, detail] = Object.entries(contact)[0];
+                            return `<div class="contact-item"><strong>${type}:</strong> ${detail}</div>`;
+                        }).join('');
                     } else {
                         el.textContent = value;
                     }
                 });
+                applyContactsColumnLayout();
             })
             .catch(error => {
                 console.error('Error loading content:', error);
@@ -62,11 +86,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Helper function to get value from JSON object using dot notation
-    function getValueFromJSON(key, json) {
-        return key.split('.').reduce((acc, part) => acc && acc[part], json);
+    function getValueFromJSON(key, data) {
+        const keys = key.split('.');
+        let value = data;
+        keys.forEach(k => {
+            value = value[k];
+        });
+        return value;
     }
 
+    function applyContactsColumnLayout() {
+        const contactsContent = document.querySelector('.contacts-content');
+        const contactItems = contactsContent.querySelectorAll('.contact-item');
+        if (contactItems.length > 4) {
+            contactsContent.classList.add('multi-column');
+        } else {
+            contactsContent.classList.remove('multi-column');
+        }
+    }
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) { // Show button if scrolled more than 100px
+            toTopButton.classList.add('show');
+        } else {
+            toTopButton.classList.remove('show');
+        }
+    });
+
+    detectSystemTheme();
     // Load default language (Russian)
     loadContent('ru');
 
@@ -87,3 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

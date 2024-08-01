@@ -25,7 +25,13 @@
         "content": "Tula State University, Bachelor of Applied Mathematics and Informatics • 2016 – 2019"
     },
     "contacts": {
-        "title": "Contacts",
-        "content": "Phone: +7 (902) 844-85-01\nEmail: vkhanieva@gmail.com\nLinkedIn: linkedin.com/in/vkhanieva\nGitHub: github.com/vkhiani\nHabr: habr.com/ru/users/vkhanieva/posts/"
+        "title": "Контакты",
+        "content": [
+            {"Тел.": "+7 (902) 844-85-01"},
+            {"Почта": "vkhanieva@gmail.com"},
+            {"LinkedIn": "linkedin.com/in/vkhanieva"},
+            {"GitHub": "github.com/vkhiani"},
+            {"Habr": "habr.com/ru/users/vkhanieva/posts/"}
+        ]
     }
 }
