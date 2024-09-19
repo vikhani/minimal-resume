@@ -1,0 +1,589 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    order: 1; /* Moves the content to the left in the flex container */
+    flex: 1; /* Allows the content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name-avatar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; /* Space between sections */
+}
+
+.profile-header {
+    order: 2; /* Moves the avatar to the right in the flex container */
+    margin-left: 20px; /* Add space between profile and content */
+}
+
+.profile-pic {
+    width: 250px; /* Adjust the size as needed */
+    height: 250px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-right: 20px; /* Space between the avatar and the content */
+}
+
+/* Media Query for small screens */
+@media (max-width: 1000px) {
+    .header-container {
+        flex-direction: column; /* Stack elements vertically */
+        /* align-items: center; Center items horizontally */
+    }
+
+    .header-content {
+        order: 3; /* Move contact info to the bottom */
+        text-align: center; /* Center text in the content */
+        align-items: center;
+    }
+
+    .profile-header {
+        order: 2; /* Move avatar below the toggles */
+        margin-left: 0; /* Remove margin for centered alignment */
+        margin-top: 20px; /* Space above the avatar */
+        align-items: center;
+    align-self: center;
+    }
+
+    .control-panel {
+        order: 1; /* Move toggles to the top */
+        margin-bottom: 20px; /* Space below the toggles */
+        align-items: start;
+    }
+
+    .contact-buttons {
+        order: 4; /* Ensure contact buttons are at the bottom */
+        margin-top: 20px; /* Space above the contact buttons */
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    position: relative;
+}
+
+
+.contact-info i {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.contact-info button {
+    margin-left: 10px; /* Space between buttons */
+}
+
+/* Contact buttons styles */
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-button, .copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12); /* Gradient from blue to purple to orange */
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-right: 5px; /* Add margin to space the buttons */
+    position: relative; /* For inner highlight effect */
+}
+
+.contact-button {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Edge highlight effect */
+.contact-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light highlight on the edge */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+    z-index: 1; /* Place highlight above the button but below the icon */
+}
+
+.contact-button:hover {
+    background-color: #868686;
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #2980b9, #8e44ad, #e67e22); /* Slightly darker gradient */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.contact-button i {
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+}
+
+/* 
+.light-theme .contact-button {
+    background-color: var(--button-background-light);
+    color: var(--button-text-light);
+}
+
+.dark-theme .contact-button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-dark);
+} */
+
+/* .contact-button:hover {
+    background-color: #868686;
+} */
+
+.copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.copy-message {
+    display: inline-block;
+    font-size: 14px;
+    color: transparent; /* Hide the default text color */
+    background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12); /* Gradient from blue to purple to orange */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For WebKit browsers */
+   /* text-fill-color: transparent;  For WebKit browsers */
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+.control-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.switch-container {
+    margin-right: 20px; /* Add space between toggles */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Adjust width based on the total width needed */
+    height: 31px; /* Height of the toggle switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Adjust padding to fit icons within the slider */
+    height: 100%;
+    width: 100%;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 3px; /* Adjust the left position to fit the starting point */
+    bottom: 3px;
+    background-color: white;
+    transition: transform 0.4s;
+    border-radius: 50%;
+}
+
+.slider i {
+    color: #fff;
+    font-size: 15px;
+    z-index: 1;
+}
+
+.slider .fa-sun {
+    position: absolute;
+    left: 8px; /* Adjust left position to align with slider */
+}
+
+.slider .fa-moon {
+    position: absolute;
+    right: 8px; /* Adjust right position to align with slider */
+}
+
+input:checked + .slider {
+    background-color: #000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px); /* Adjust translateX to fit within the slider */
+}
+
+input:not(:checked) + .slider .fa-sun {
+    color: #000; /* Adjust color for day mode */
+}
+
+input:checked + .slider .fa-moon {
+    color: #000; /* Adjust color for night mode */
+}
+
+.slider .label-en,
+.slider .label-ru {
+    font-size: 16px;
+    color: #fff;
+    z-index: 1;
+}
+
+.slider .label-en {
+    position: absolute;
+    right: 8px; /* Adjust left position to align with slider */
+}
+
+.slider .label-ru {
+    position: absolute;
+    left: 8px; /* Adjust right position to align with slider */
+}
+
+input:not(:checked) + .slider .label-en {
+    color: #793a3a; /* Adjust color for English mode */
+}
+
+input:checked + .slider .label-ru {
+    color: #fff; /* Adjust color for Russian mode */
+}
+
+:root {
+    --button-background-light: #ccc;
+    --button-background-dark: #000;
+    --button-text-light: #000;
+    --button-text-dark: #fff;
+}
+
+/* Theme styles */
+/* .light-theme {
+    background-color: #ebebeb;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #ebebeb;
+} */
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.light-theme .section-title,
+.light-theme .experience-title {
+    color: #333;
+}
+
+
+.light-theme .experience-stack {
+    color: #5f5f5f;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.dark-theme .section-title,
+.dark-theme .experience-title {
+    color: #f5f5f5;
+}
+
+.dark-theme .experience-stack {
+    color: #b3b3b3;
+}
+
+.light-theme .fas.fa-copy {
+    color: #333;
+}
+
+.dark-theme .fas.fa-copy {
+    color: #f5f5f5;
+}
+
+
+.light-theme .author-name {
+    color: #333;
+}
+
+.dark-theme .author-name {
+    color: #f5f5f5;
+}
+
+/* .light-theme .copy-button {
+    color: var(--button-text-light);
+}
+
+.dark-theme .copy-button {
+    color: var(--button-text-dark);
+} */
+
+
+.name-position {
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.experience-stack {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0;
+}
+
+.name-position h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin: 0;
+}
+
+/* Author Title */
+.author-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #555;
+    margin: 10px 0 0; /* Add some space above the title */
+    /* transition: color 0.3s ease; */
+}
+
+.author-title i {
+    margin-right: 10px; /* Space between the icon and the text */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+/* Light Theme */
+body.light-theme .author-title {
+    color: #555;
+}
+
+body.light-theme .author-title i {
+    color: #d35400; /* Orange color for Java icon */
+}
+
+/* Dark Theme */
+body.dark-theme .author-title {
+    color: #ccc;
+}
+
+body.dark-theme .author-title i {
+    color: #e67e22; /* Darker orange color for Java icon */
+}
+
+.experience-item {
+    margin-bottom: 20px; /* Space between experience items */
+}
+
+.experience-title {
+    font-weight: bold; /* Make the title bold */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 5px; /* Space between title and description */
+    color: #333; /* Darker color for contrast */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #a4a4a4;
+    padding-bottom: 5px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+}
+
+.contacts-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-item {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+.contacts-content.multi-column .contact-item {
+    flex: 1 1 calc(45% - 10px);
+}
+
+@media (max-width: 600px) {
+    .contact-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* To-Top Button Styles */
+.to-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Position it to the right side of the screen */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    color: rgba(0, 0, 0, 0.7); /* Dark text color for contrast */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s, background 0.3s, box-shadow 0.3s, border 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 1000;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Ensure it is not clickable */
+}
+
+.to-top-button.show {
+    opacity: 1; /* Show when scrolled down */
+    visibility: visible; /* Make it clickable */
+}
+
+.to-top-button:hover {
+    background: linear-gradient(135deg, #3395d6, #b05bd5, #f88b2b); /* Slightly darker gradient */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Lighter edge on hover */
+}
+
+.to-top-button i {
+    font-size: 20px;
+}
