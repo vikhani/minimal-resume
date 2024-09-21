@@ -51,6 +51,10 @@
   background-color: #2980b9;
 }
 
+.tag:hover {
+    background-color: #135580;
+  }
+
 /* Optional: Improve responsiveness */
 @media screen and (max-width: 768px) {
   #tags-container {

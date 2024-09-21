@@ -145,25 +145,37 @@ if (document.location.pathname.endsWith("blog.html")) {
       post.tags.forEach((tag) => tagsSet.add(tag));
     });
 
+    addTagToTagList("All", tagsContainer);
+
     allowedTags.forEach((tag) => {
       if (tagsSet.has(tag)) {
-        const tagElement = document.createElement("div");
-        tagElement.classList.add("tag");
-        tagElement.textContent = tag;
-
-        // Add click event to filter posts by tag
-        tagElement.addEventListener("click", () => {
-          filterPostsByTag(tag);
-        });
-
-        tagsContainer.appendChild(tagElement);
+        addTagToTagList(tag, tagsContainer);
       }
     });
   }
 
+  function addTagToTagList(tagContent, tagsContainer) {
+    const tagElement = document.createElement("div");
+    tagElement.classList.add("tag");
+    tagElement.textContent = tagContent;
+    // Add click event to filter posts by tag
+    tagElement.addEventListener("click", () => {
+      filterPostsByTag(tagContent);
+    });
+
+    tagsContainer.appendChild(tagElement);
+  }
+
   function filterPostsByTag(selectedTag) {
-    console.warn(selectedTag);
     const posts = Array.from(document.querySelectorAll(".post-preview"));
+
+    if (selectedTag == "All") {
+      posts.forEach((post) => {
+        post.style.display = "block";
+      });
+      return;
+    }
+
     posts.forEach((post) => {
       const tags = Array.from(post.querySelectorAll(".tag-in-list")).map(
         (tag) => tag.textContent

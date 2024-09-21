@@ -58,6 +58,8 @@
 .post-preview h2 {
   margin: 10px 0;
   font-size: 1.5em;
+  max-width: 800px;
+  min-width: 800px;
 }
 
 .post-preview p {
@@ -96,8 +98,6 @@
   line-height: 1.6;
   margin-bottom: 20px;
 }
-
-
 
 /* Main section */
 #blog-main {
