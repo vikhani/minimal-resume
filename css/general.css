@@ -1,0 +1,59 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center; /* Vertically center items */
+  background-color: #3e049c;
+  color: #fff;
+  padding: 10px 20px; /* Adjust for more spacing */
+}
+
+header h1 {
+  margin: 10px; /* Remove default margin */
+  font-size: 24px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  /* background: linear-gradient(135deg, #3498db, #9b59b6, #f39c12);  Use background instead of background-color */
+  padding: 10px 15px; /* Space around the button */
+  /* border-radius: 5px; Rounded corners */
+  width: 100px;
+}
+
+header nav a:hover {
+  /* background: linear-gradient(40deg, #3498db, #9b59b6, #f39c12);  Change gradient direction on hover */
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.possum-pic {
+    width: 150px; /* Adjust the size as needed */
+    /* height: auto; Adjust the size as needed */
+    /* border-radius: 50%; */
+    margin-right: 20px; /* Space between the avatar and the content */
+    margin-top: 15px;
+  }
+  

@@ -1,38 +1,38 @@
 {
-    "name": "WIP!",
-    "title": "Java Developer",
-    "skills": {
-        "title": "Skills",
-        "content": "Java, Spring Boot, PostgreSQL, Hibernate, MyBatis, Liquibase, Kafka, K8s, OpenShift, Docker, Gradle, Maven | English C1"
-    },
-    "about": {
-        "title": "WIP",
-        "content": "WIP"
-    },
-    "experience": {
-        "title": "Experience",
-        "items": [
-            {
-                "role": "Java Developer",
-                "company": "Senla",
-                "dates": "March 2023 – Present",
-                "stack": "",
-                "description": "Project - microservices for aggregating pre-approval proposals for legal entities..."
-            }
-        ]
-    },
-    "education": {
-        "title": "Education",
-        "content": "Tula State University, Bachelor of Applied Mathematics and Informatics • 2016 – 2019"
-    },
-    "contacts": {
-        "title": "Контакты",
-        "content": [
-            {"Тел.": "+7 (902) 844-85-01"},
-            {"Почта": "vkhanieva@gmail.com"},
-            {"LinkedIn": "linkedin.com/in/vkhanieva"},
-            {"GitHub": "github.com/vkhiani"},
-            {"Habr": "habr.com/ru/users/vkhanieva/posts/"}
-        ]
-    }
+  "name": "WIP!",
+  "title": "Java Developer",
+  "skills": {
+    "title": "Skills",
+    "content": "Java, Spring Boot, PostgreSQL, Hibernate, MyBatis, Liquibase, Kafka, K8s, OpenShift, Docker, Gradle, Maven | English C1"
+  },
+  "about": {
+    "title": "WIP",
+    "content": "WIP"
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "role": "Java Developer",
+        "company": "Senla",
+        "dates": "March 2023 – Present",
+        "stack": "",
+        "description": "Project - microservices for aggregating pre-approval proposals for legal entities..."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "content": "Tula State University, Bachelor of Applied Mathematics and Informatics • 2016 – 2019"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "content": [
+      { "Тел.": "+7 (902) 844-85-01" },
+      { "Почта": "vkhanieva@gmail.com" },
+      { "LinkedIn": "linkedin.com/in/vkhanieva" },
+      { "GitHub": "github.com/vkhiani" },
+      { "Habr": "habr.com/ru/users/vkhanieva/posts/" }
+    ]
+  }
 }

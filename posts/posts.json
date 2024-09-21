@@ -1,0 +1,19 @@
+{
+  "allowedTags": ["Java", "Web Development", "JavaScript", "CSS", "HTML"],
+  "posts": [
+    {
+      "title": "My First Blog Post",
+      "file": "post1.md",
+      "description": "This is a short summary of my first blog post...This is a short summary of my first blog post...This is a short summary of my first blog post...This is a short summary of my first blog post...",
+      "image": "images/img1.jpg",
+      "tags": ["JavaScript", "Web Development"]
+    },
+    {
+      "title": "A Deep Dive into Java",
+      "file": "post2.md",
+      "description": "Exploring Java's advanced features and best practices.",
+      "image": "images/img2.jpg",
+      "tags": ["Java", "Web Development"]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+/* BLOG PAGE */
+#blog-container {
+  flex: 1;
+  /* padding: 0 20px; */
+  text-align: left; /* Ensure text alignment is left */
+  margin: 0 auto; /* Center the blog list */
+  max-width: 100%; /* Ensure it doesn’t exceed the page width */
+}
+
+.blog-post-preview {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  text-align: left; /* Ensure content inside is aligned to the left */
+  display: flex; /* Optional: Flexbox if you want image + content side-by-side */
+  align-items: flex-start; /* Align content to the top (if using flex) */
+  width: 100%;
+}
+
+.blog-post-title {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.blog-post-excerpt {
+  color: #555;
+  text-align: left;
+}
+
+/* Blog post preview */
+/* Blog post preview container */
+.post-preview {
+  display: block; /* Flexbox for layout */
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Image inside the blog post preview */
+.post-image {
+  width: 300px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+
+  margin-right: 10px; /* Space between image and text */
+}
+
+/* Text container inside the post preview */
+.post-preview h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.post-preview p {
+  color: #666;
+  font-size: 1em;
+}
+
+/* Hover effect */
+.post-preview:hover {
+  background-color: #f5f5f5;
+}
+
+/* Full post styling */
+/* Style for the post image */
+/* .post-image {
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  height: auto;
+} */
+
+/* Style for the post container */
+#postContainer {
+  padding: 0 10%;
+  margin-top: 20px;
+}
+
+#post-content h1,
+#post-content h2 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#post-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+
+/* Main section */
+#blog-main {
+  display: flex;
+  justify-content: flex-start; /* Align children to the left */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  min-height: calc(100vh - 300px); /* Adjust for header and footer height */
+}
+
+#post-content {
+  margin-top: 20px;
+}
+
+footer {
+  position: relative; /* Changed from fixed to relative */
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+}
+
+/* Optional: Improve responsiveness */
+@media screen and (max-width: 768px) {
+  #blog-main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #tags-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .post-preview {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Take full width on small screens */
+    padding: 10px;
+  }
+
+  .post-image {
+    width: 100%; /* Full width image on small screens */
+    margin: 0 auto 10px auto; /* Center the image */
+  }
+
+  .blog-layout {
+    flex-direction: column;
+  }
+
+  .posts-column {
+    width: 100%; /* Full width for posts column */
+  }
+}
+
+.blog-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts-column {
+  flex: 1; /* Adjust the width of the posts column */
+  padding-right: 20px; /* Add some space to the right */
+}
+
+/* BLOG PAGE */
+#blog-container {
+  flex: 1;
+  text-align: left; /* Ensure text alignment is left */
+  margin: 0 auto; /* Center the blog list */
+  max-width: 100%; /* Ensure it doesn’t exceed the page width */
+  padding: 0 20px; /* Add padding for small screens */
+}
+
+.post-preview {
+  display: block; /* Flexbox for layout */
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  width: 100%; /* Make it responsive to the container */
+}
+
+.post-image {
+  width: 30%; /* Use percentage to allow resizing */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-right: 10px; /* Space between image and text */
+}

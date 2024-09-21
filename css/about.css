@@ -1,0 +1,7 @@
+#about-content {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    min-height: calc(100vh - 300px); /* Adjust for header and footer height */
+  }

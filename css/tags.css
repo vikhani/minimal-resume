@@ -1,0 +1,60 @@
+.tags-container {
+  margin-top: 5px;
+}
+
+.tags-column {
+  width: 10%; /* Adjust width as needed */
+  padding-right: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.tag {
+  display: block;
+  background-color: #3498db;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 300;
+}
+
+.tag-in-list {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 100;
+}
+
+.tag-filter {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.tag-filter:hover {
+  background-color: #2980b9;
+}
+
+/* Optional: Improve responsiveness */
+@media screen and (max-width: 768px) {
+  #tags-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
