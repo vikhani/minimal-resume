@@ -18,13 +18,14 @@ header {
   align-items: center; /* Vertically center items */
   background-color: #3e049c;
   color: #fff;
-  padding: 10px 20px; /* Adjust for more spacing */
+  padding: 10px; /* Adjust for more spacing */
 }
 
 header h1 {
-  margin: 10px; /* Remove default margin */
-  font-size: 24px;
+  margin: 20px;
+  font-size: 28px;
   font-family: "Gill Sans", sans-serif;
+  transform: rotate(-15deg);
 }
 
 header nav a {
@@ -50,10 +51,10 @@ footer {
 }
 
 .possum-pic {
-    width: 150px; /* Adjust the size as needed */
+    width: 170px; /* Adjust the size as needed */
     /* height: auto; Adjust the size as needed */
     /* border-radius: 50%; */
-    margin-right: 20px; /* Space between the avatar and the content */
-    margin-top: 15px;
+    margin-right: 30px; /* Space between the avatar and the content */
+    margin-top: 10px;
   }
   
